@@ -32,12 +32,12 @@
             var pushNotification;
 
             function onDeviceReady() {
+                alert('device ready');
                 //$("#app-status-ul").append('<li>deviceready event received</li>');
 
 				document.addEventListener("backbutton", function(e) {
 					// $("#app-status-ul").append('<li>backbutton event received</li>');
 
-					alert($("#home").length);
 					if( $("#home").length > 0) {
 						// call this to get a new token each time. don't call it to reuse existing token.
 						//pushNotification.unregister(successHandler, errorHandler);
@@ -94,7 +94,10 @@
 
             // handle GCM notifications for Android
             function onNotificationGCM(e) {
+                alert('notification received');
                 //$("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
+
+                alert(e.event);
 
                 switch( e.event ) {
                     case 'registered':
