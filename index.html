@@ -22,17 +22,18 @@
     </head>
     <body>
 
-        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        
         <!-- <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> -->
         <!--<script type="text/javascript" charset="utf-8" src="js/jquery_1.5.2.min.js"></script>-->
 		<script type="text/javascript" charset="utf-8" src="js/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" src="PushNotification.js"></script>
 
         <script type="text/javascript">
             var pushNotification;
 
             function onDeviceReady() {
-                alert('device ready');
+
                 //$("#app-status-ul").append('<li>deviceready event received</li>');
 
 				document.addEventListener("backbutton", function(e) {
@@ -141,10 +142,12 @@
 
             function successHandler (result) {
                // $("#app-status-ul").append('<li>success:'+ result +'</li>');
+               alert('result = ' + result);
             }
 
             function errorHandler (error) {
                 //$("#app-status-ul").append('<li>error:'+ error +'</li>');
+                alert('error = ' + error);
             }
 
 			document.addEventListener('deviceready', onDeviceReady, true);
