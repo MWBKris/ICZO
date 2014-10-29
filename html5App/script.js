@@ -269,6 +269,12 @@ $(document).ready(function() {
     onlineChecker.init();
     interfaceSwitcher.init();
     formSubmitter.init();
+    
+    document.addEventListener("deviceready", function(){
+    	alert('deviceready');
+    pushNotification = window.plugins.pushNotification;
+
+});
 });
 
 $(window).resize(function() {
