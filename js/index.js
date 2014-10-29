@@ -64,7 +64,7 @@ var app = {
 			 alert(device.platform);
              if (device.platform == 'android' || device.platform == 'Android') {
                  alert('<li>registering android</li>');
-                 pushNotification.register(successHandler, errorHandler, {"senderID":"395880463247","ecb":"onNotificationGCM"});     // required!
+                 pushNotification.register(successHandler, errorHandler, {"senderID":"813672614268","ecb":"onNotificationGCM"});     // required!
              } else {
                  alert('<li>registering iOS</li>');
                  pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});    // required!
@@ -88,6 +88,7 @@ var app = {
 	},	
 	
 	onNotificationGCM: function(e) {
+        alert('notification received');
         switch( e.event )
         {
             case 'registered':
